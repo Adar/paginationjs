@@ -14,7 +14,7 @@ Basically the rendering part only is being left over as this version is meant to
 
 # Example
 
-`
+```javascript
   $(selector).pagination({
                 pageSize: itemsPerPage,
                 nextText: "Weiter",
@@ -27,7 +27,7 @@ Basically the rendering part only is being left over as this version is meant to
                 ulClassName: "pagination-list",
                 navClassName: "is-small is-centered"
             })
-`
+```
 
 # License
 
