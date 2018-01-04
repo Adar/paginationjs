@@ -126,18 +126,18 @@
 
                 html += '<nav class="pagination ' + attributes.navClassName + '" role="navigation" aria-label="pagination">';
 
+                // Previous page button
+                // noinspection EqualityComparisonWithCoercionJS
+                if (currentPage == 1) {
+                    html += '<a class="pagination-previous" disabled="disabled">' + prevText + '<\/a>';
+                } else {
+                    html += '<a class="pagination-previous" href="' + pageLink + (Number(currentPage) - 1) + '">' + prevText + '<\/a>';
+                }
+
                 if (ulClassName) {
                     html += '<ul class="' + ulClassName + '">';
                 } else {
                     html += '<ul>';
-                }
-
-                // Previous page button
-                // noinspection EqualityComparisonWithCoercionJS
-                if (currentPage == 1) {
-                    html += '<li><a class="pagination-previous" disabled="disabled">' + prevText + '<\/a><\/li>';
-                } else {
-                    html += '<li data-num="' + (currentPage - 1) + '" title="Previous page"><a class="pagination-previous" href="' + pageLink + (Number(currentPage) - 1) + '">' + prevText + '<\/a><\/li>';
                 }
 
                 // Page numbers
@@ -179,14 +179,17 @@
                     }
                 }
 
+                html += '<\/ul>';
+
                 // Next page button
                 // noinspection EqualityComparisonWithCoercionJS
                 if (currentPage == totalPage) {
-                    html += '<li><a class="pagination-next" disabled="disabled">' + nextText + '<\/a><\/li>';
+                    html += '<a class="pagination-next" disabled="disabled">' + nextText + '<\/a>';
                 } else {
-                    html += '<li data-num="' + (currentPage + 1) + '" title="Next page"><a class="pagination-next" href="' + pageLink + (Number(currentPage) + 1) + '">' + nextText + '<\/a><\/li>';
+                    html += '<a class="pagination-next" href="' + pageLink + (Number(currentPage) + 1) + '">' + nextText + '<\/a>';
                 }
-                html += '<\/ul><\/nav>';
+
+                html += '<\/nav>';
 
                 return html;
             },
