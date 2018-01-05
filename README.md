@@ -1,6 +1,7 @@
 # Pagination.js
 
-> A jQuery plugin to provide simple yet fully customisable pagination.
+> A jQuery plugin to provide simple yet fully customisable pagination. Modified
+> for use with Bulma CSS
 
 See demos and full documentation at official site: [http://pagination.js.org](http://pagination.js.org)
 
